@@ -12,3 +12,4 @@ D:\.net\projects\task02\task02\obj\Debug\net8.0\refint\task02.dll
 D:\.net\projects\task02\task02\obj\Debug\net8.0\task02.pdb
 D:\.net\projects\task02\task02\obj\Debug\net8.0\task02.genruntimeconfig.cache
 D:\.net\projects\task02\task02\obj\Debug\net8.0\ref\task02.dll
+D:\.net\projects\task02\task02\obj\Debug\net8.0\task02.sourcelink.json

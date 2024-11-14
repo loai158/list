@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             string input = "";
+            
             List<int> myList = new List<int>();
             do
             {
@@ -14,12 +15,13 @@
                 Console.WriteLine("Enter M To Show The Mean Of The List : ");
                 Console.WriteLine("Enter S To Show The Smallest Number Of The List : ");
                 Console.WriteLine("Enter L To Show The Largest Number Of The List : ");
+                Console.WriteLine("Enter F To Find A Number Of The List : ");
+                Console.WriteLine("Enter C To Remove All The Numbers Of The List : ");
                 Console.WriteLine("Enter Q To Quit The Program ");
                 input = Console.ReadLine();
                 input = input.ToUpper();
                 switch (input)
                 {
-                    
                     case "P":
                         if (myList.Count == 0)
                             Console.WriteLine("sorry the list is empty ");
@@ -74,7 +76,40 @@
                         Console.WriteLine($"The Largest Number Is {largest}");
 
                         break;
-                        default : Console.WriteLine("Invalid , Please Enter Another Input ");
+                    case "F":
+                        if (myList.Count == 0)
+                        {
+                            Console.WriteLine("Sorry Your List is Empty ");
+                        }
+                        else
+                        {
+                            Console.Write("Please Enter The Number :");
+                            int find = int.Parse(Console.ReadLine());
+                            for (int i = 0; i < myList.Count; i++)
+                            {
+                                if (myList[i] == find)
+                                {
+                                    Console.WriteLine($"{find} exist in index number {i + 1}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Sorry The Number Does Not Exist  ");
+                                }
+                            }
+                        }
+                        break;
+                    case "C":
+                        if (myList.Count == 0)
+                        {
+                            Console.WriteLine("Your List Is Already Empty ");
+                        }
+                        else
+                        {
+                            myList.Clear();
+                            Console.WriteLine("Your List Is Cleared !");
+                        }
+                        break;
+                    default : Console.WriteLine("Invalid , Please Enter Another Input ");
                         break;
                 }
             } while (input != "Q");
